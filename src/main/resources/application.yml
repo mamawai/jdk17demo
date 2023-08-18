@@ -1,51 +1,51 @@
-server:
-  error:
-    include-message: always
-    include-binding-errors: always
-
-spring:
-  datasource:
-    password: 733806
-    url: jdbc:postgresql://localhost:5432/registration
-    username: postgres
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-    show-sql: true
-  mail:
-    host: localhost
-    port: 1025
-    username: hello
-    password: hello
-    properties:
-      mail:
-        smtp:
-          ssl:
-            trust: "*"
-          auth: true
-          starttls:
-            enable: true
-          connectiontimeout: 5000
-          timeout: 3000
-          writetimeout: 5000
-  #  mail:
-  #    host: smtp.qq.com
-  #    port: 465
-  #    username: 1624133181@qq.com
-  #    password: eeukcxbpdfvdfdbf
-  #    properties:
-  #      mail:
-  #        smtp:
-  #          ssl:
-  #            enable: true
-  #            trust: "*"
-  #          auth: true
-  #          starttls:
-  #            enable: true
-  #          connectiontimeout: 5000
-  #          timeout: 3000
-  #          writetimeout: 5000
+#server:
+#  error:
+#    include-message: always
+#    include-binding-errors: always
+#
+#spring:
+#  datasource:
+#    password: 733806
+#    url: jdbc:postgresql://localhost:5432/registration
+#    username: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+#    show-sql: true
+#  mail:
+#    host: localhost
+#    port: 1025
+#    username: hello
+#    password: hello
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            trust: "*"
+#          auth: true
+#          starttls:
+#            enable: true
+#          connectiontimeout: 5000
+#          timeout: 3000
+#          writetimeout: 5000
+#  #  mail:
+#  #    host: smtp.qq.com
+#  #    port: 465
+#  #    username: 1624133181@qq.com
+#  #    password: eeukcxbpdfvdfdbf
+#  #    properties:
+#  #      mail:
+#  #        smtp:
+#  #          ssl:
+#  #            enable: true
+#  #            trust: "*"
+#  #          auth: true
+#  #          starttls:
+#  #            enable: true
+#  #          connectiontimeout: 5000
+#  #          timeout: 3000
+#  #          writetimeout: 5000
