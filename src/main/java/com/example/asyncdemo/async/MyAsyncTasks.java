@@ -6,8 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyAsyncTasks {
-
-    @Async
+    @Async("eee")
     public void doTask1(){
         // 异步任务1实现
         System.out.println("Task 1:Start:"+Thread.currentThread().getName());
@@ -18,7 +17,6 @@ public class MyAsyncTasks {
         }
         System.out.println("Task 1：End");
     }
-
     @Async
     public void doTask2(){
         // 异步任务1实现
@@ -30,7 +28,5 @@ public class MyAsyncTasks {
         }
         System.out.println("Task 2：End");
     }
-
-
 }
 

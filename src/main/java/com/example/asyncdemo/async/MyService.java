@@ -1,5 +1,8 @@
 package com.example.asyncdemo.async;
 
+import com.example.asyncdemo.Student;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,4 +21,5 @@ public class MyService {
         asyncTasks.doTask2();
         System.out.println(Thread.currentThread().getName()+"执行");// http-nio-8080-exec-1
     }
+
 }
