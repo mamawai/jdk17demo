@@ -41,7 +41,7 @@ public class StudentIdCard {
 
     @OneToOne(
 //            cascade = CascadeType.REMOVE,
-            fetch = FetchType.EAGER
+            fetch = FetchType.LAZY
     )
     @JoinColumn(
 //            nullable = false,

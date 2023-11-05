@@ -45,9 +45,10 @@ public class StudentJPAController {
      * 批量更新学生
      */
     @PostMapping("/batchSaveWithId")
-    public String batchSaveStudentAndIdCard(@RequestBody String jsonString) {
+    public String batchSaveStudentAndIdCard(@RequestBody BatchStudentWithIdCard batch) {
         try {
-            BatchStudentWithIdCard batch = objectMapper.readValue(jsonString, BatchStudentWithIdCard.class);
+            // 这里可以直接用对象来接受入参
+            // BatchStudentWithIdCard batch = objectMapper.readValue(jsonString, BatchStudentWithIdCard.class);
 
             List<String> cardIds = batch.getCardIds();
             List<Student> students = batch.getStudents();

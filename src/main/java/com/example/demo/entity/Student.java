@@ -61,7 +61,7 @@ public class Student {
     private Integer age;
 
     @OneToOne(
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             mappedBy = "student",
 //            orphanRemoval = true,
             cascade = {
