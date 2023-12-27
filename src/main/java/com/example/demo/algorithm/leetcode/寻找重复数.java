@@ -3,7 +3,7 @@ package com.example.demo.algorithm.leetcode;
 public class 寻找重复数 {
     public static void main(String[] args) {
         int[] nums = new int[]{2,5,9,6,9,3,8,9,7,1};
-        int duplicate = new Solution2().findDuplicate(nums);
+        int duplicate = new SolutionA().findDuplicate(nums);
         System.out.println(duplicate);
     }
 }
@@ -37,7 +37,7 @@ class Solution {
         return ans;
     }
 }
-class Solution2 {
+class SolutionA {
     public int findDuplicate(int[] nums) {
     // 快慢指针
         int slow = 0, fast = 0;

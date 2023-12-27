@@ -1,4 +1,4 @@
-package com.example.demo.algorithm.leetcode;
+package com.example.demo.javaPractice;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
