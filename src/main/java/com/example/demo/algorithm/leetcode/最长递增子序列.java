@@ -2,7 +2,7 @@ package com.example.demo.algorithm.leetcode;
 
 public class 最长递增子序列 {
     public static void main(String[] args) {
-        int i = new SolutionA300().lengthOfLIS(new int[]{9, 8, 4, 12, 2, 3, 5, 6, 7, 8});
+        int i = new SolutionB300().lengthOfLIS(new int[]{9, 8, 4, 12, 2, 3, 5, 6, 7, 8});
         System.out.println(i);
     }
 }
@@ -49,8 +49,10 @@ class SolutionB300 {
         int maxAns = 1;
         for (int i = 1; i < nums.length; i++) {
             dp[i] = 1;
-            for (int j = 0; j < 1; j++) {
-                dp[i] = Math.max(dp[i], dp[j] + 1);
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
             }
             maxAns = Math.max(maxAns, dp[i]);
         }

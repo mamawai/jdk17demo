@@ -6,7 +6,7 @@ public class 使用最小花费爬楼梯 {
     }
 }
 
-class Solution {
+class Solutionshjak {
     public int minCostClimbingStairs(int[] cost) {
         int n = cost.length;
         int[] dp = new int[n + 1];
