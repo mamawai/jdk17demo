@@ -2,10 +2,11 @@ package com.example.demo.algorithm.leetcode.每日一题;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.LinkedList;
 
 public class 队列中可以看到的人数 {
     public static void main(String[] args) {
-        int[] ints = new Solution1944().canSeePersonsCount(new int[]{10, 6, 8, 5, 11, 9});;
+        int[] ints = new Solution1944Again().canSeePersonsCount(new int[]{10, 6, 8, 5, 11, 9});;
     }
 }
 /**
@@ -34,5 +35,52 @@ class Solution1944 {
             res[i] = count;
         }
         return res;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution1944Again {
+    public int[] canSeePersonsCount(int[] heights) {
+        LinkedList<Integer> stack = new LinkedList<>();
+        int[] ans = new int[heights.length];
+        // 从右向左入栈
+        for (int i = heights.length - 1; i >= 0 ; i--) {
+            int count = 0;
+            int height = heights[i];
+            // 第一个入栈
+            if (stack.size() == 0) {
+                stack.push(height);
+                ans[i] = count;
+                continue;
+            }
+            while (stack.peek() != null && height >= stack.peek()) {
+                stack.pop();
+                count++;
+            }
+            stack.push(height);
+            ans[i] = stack.size() == 1 ? count : ++count;
+        }
+        return ans;
     }
 }
