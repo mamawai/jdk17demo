@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class 美丽塔2 {
     public static void main(String[] args) {
-        long sum = new SolutionA2866().maximumSumOfHeights(Arrays.asList(1,2,3,4,5,6));
+        long sum = new SolutionA2866().maximumSumOfHeights(Arrays.asList(6,5,3,9,2,7));
         System.out.println(sum);
     }
 }
