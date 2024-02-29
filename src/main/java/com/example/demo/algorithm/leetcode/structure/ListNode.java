@@ -1,4 +1,4 @@
-package com.example.demo.algorithm.leetcode;
+package com.example.demo.algorithm.leetcode.structure;
 
 public class ListNode {
     public int val;

@@ -1,5 +1,7 @@
 package com.example.demo.algorithm.leetcode;
 
+import com.example.demo.algorithm.leetcode.structure.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;

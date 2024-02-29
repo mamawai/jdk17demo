@@ -1,4 +1,4 @@
-package com.example.demo.algorithm.leetcode;
+package com.example.demo.algorithm.leetcode.structure;
 
 public class TreeNode {
     public int val;
@@ -8,7 +8,7 @@ public class TreeNode {
     TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 

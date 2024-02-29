@@ -1,12 +1,6 @@
 package com.example.demo.algorithm.leetcode.每日一题;
 
-import com.example.demo.algorithm.leetcode.ListNode;
-import com.example.demo.algorithm.leetcode.TreeNode;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import com.example.demo.algorithm.leetcode.structure.TreeNode;
 
 public class 从二叉搜索树到更大树 {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package com.example.demo.algorithm.leetcode.每日一题;
 
-import com.example.demo.algorithm.leetcode.ListNode;
+import com.example.demo.algorithm.leetcode.structure.ListNode;
 
 import java.util.*;
 

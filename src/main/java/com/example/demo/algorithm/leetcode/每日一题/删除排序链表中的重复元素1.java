@@ -1,6 +1,6 @@
 package com.example.demo.algorithm.leetcode.每日一题;
 
-import com.example.demo.algorithm.leetcode.ListNode;
+import com.example.demo.algorithm.leetcode.structure.ListNode;
 
 public class 删除排序链表中的重复元素1 {
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package com.example.demo.algorithm.leetcode;
 
+import com.example.demo.algorithm.leetcode.structure.ListNode;
+
 public class 两数相加 {
     public static void main(String[] args) {
         Solution2 solution2 = new Solution2();

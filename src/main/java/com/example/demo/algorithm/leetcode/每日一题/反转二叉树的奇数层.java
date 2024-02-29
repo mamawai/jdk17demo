@@ -1,6 +1,6 @@
 package com.example.demo.algorithm.leetcode.每日一题;
 
-import com.example.demo.algorithm.leetcode.TreeNode;
+import com.example.demo.algorithm.leetcode.structure.TreeNode;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
