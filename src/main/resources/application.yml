@@ -10,3 +10,6 @@
 #          max-idle: 8
 #          min-idle: 0
 #          max-wait: 100ms
+de:
+  afdc:
+    config: "ddsa"
