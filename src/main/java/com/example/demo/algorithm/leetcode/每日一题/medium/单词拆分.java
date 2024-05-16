@@ -10,7 +10,7 @@ public class 单词拆分 {
     }
 }
 
-class Solution {
+class Solution139 {
     public boolean wordBreak(String s, List<String> wordDict) {
         Set<String> wordDictSet = new HashSet(wordDict);
         boolean[] dp = new boolean[s.length() + 1];
