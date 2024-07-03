@@ -12,7 +12,7 @@ public class ExcelMerger {
 
     public static void main(String[] args) throws IOException {
         try {
-            String inputFile = "C:\\Users\\mamingyang\\Desktop\\PSS备用系统建设项目过程资产文件检查结果demo_2024.xlsx";
+            String inputFile = "C:\\Users\\mamingyang\\Desktop\\PSS备用系统建设项目过程资产文件检查结果_2024demo.xlsx";
             String outputFile = "C:\\Users\\mamingyang\\Desktop\\file.xlsx";
 
             FileInputStream fis = new FileInputStream(inputFile);
@@ -70,6 +70,7 @@ public class ExcelMerger {
             newWorkbook.close();
         } catch (IOException e) {
             System.out.println("有异常");
+            e.printStackTrace();
         }
     }
 }
