@@ -4,7 +4,7 @@ import java.util.*;
 
 public class 括号生成 {
     public static void main(String[] args) {
-        List<String> list = new Solution22().generateParenthesis(3);
+        List<String> list = new Solution22().generateParenthesis(8);
         System.out.println(list);
         // ())(()
     }
