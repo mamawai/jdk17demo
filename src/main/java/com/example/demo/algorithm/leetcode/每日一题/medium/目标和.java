@@ -18,6 +18,7 @@ class Solution494 {
         int[] dp = new int[target + 1];
         dp[0] = 1;
         for (int x : nums) {
+            // 需要从后往前遍历
             for (int c = target; c >= x ;--c) {
                 dp[c] += dp[c - x];
             }
