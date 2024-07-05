@@ -1,6 +1,4 @@
-package com.example.demo.algorithm.leetcode.每日一题.medium;
-
-import com.example.demo.algorithm.leetcode.每日一题.字符串中的额外字符;
+package com.example.demo.algorithm.leetcode.热题100.medium;
 
 import java.util.Arrays;
 

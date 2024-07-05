@@ -1,4 +1,4 @@
-package com.example.demo.algorithm.leetcode.每日一题.medium;
+package com.example.demo.algorithm.leetcode.热题100.medium;
 
 public class 盛最多水的容器 {
     public static void main(String[] args) {
