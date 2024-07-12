@@ -1,8 +1,5 @@
 package com.example.demo.algorithm.leetcode.每日一题.medium;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class 交替子数组计数 {
     public static void main(String[] args) {
         long l = new Solution3101().countAlternatingSubarrays(new int[]{0, 1, 1, 1});
