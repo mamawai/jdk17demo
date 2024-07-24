@@ -72,11 +72,15 @@ class Solution2101B {
         // 中间节点
         for (int k = 0; k < n; k++) {
             // 从第一个开始遍历
+            for (BitSet fi : f) {
+                if (fi.get(k)) { // i 可以到达 k（中间节点）
+                    fi.or(f[k]); // i 也可以到 k 可以到达的点 求了并集
+                }
             }
         }
 
         int ans = 0;
-        for (BitSet s : f) {
+            for (BitSet s : f) {
             ans = Math.max(ans, s.cardinality()); // 集合大小的最大值
         }
         return ans;
