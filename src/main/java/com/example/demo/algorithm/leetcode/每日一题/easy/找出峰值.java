@@ -9,7 +9,7 @@ public class 找出峰值 {
     }
 }
 
-class Solution {
+class SolutionfindPeaks {
     public List<Integer> findPeaks(int[] mountain) {
         List<Integer> ans = new ArrayList<>();
         for(int i = 1; i < mountain.length - 1; i++) {
