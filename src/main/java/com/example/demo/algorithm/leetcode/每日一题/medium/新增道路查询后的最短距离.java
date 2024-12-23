@@ -107,6 +107,6 @@ class Solution3243C {
 
 class Solution3243D {
     public int[] shortestDistanceAfterQueries(int n, int[][] queries) {
-
+        return null;
     }
 }
