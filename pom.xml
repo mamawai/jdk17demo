@@ -69,6 +69,14 @@
 		</dependency>
 
 
+		<!-- Maven -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version> <!-- 请根据实际情况选择版本 -->
+			<scope>provided</scope>
+		</dependency>
+
 
 		<dependency>
             <groupId>junit</groupId>
