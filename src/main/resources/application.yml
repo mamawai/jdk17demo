@@ -11,4 +11,14 @@
 #          min-idle: 0
 #          max-wait: 100ms
 
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis_plus_userservice
+    username: root
+    password: 733806
+#  main:
+#    allow-circular-references: true
+  aop:
+    proxy-target-class: false
+
 
