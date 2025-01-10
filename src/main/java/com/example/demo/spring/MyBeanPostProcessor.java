@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
+//@Component
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override

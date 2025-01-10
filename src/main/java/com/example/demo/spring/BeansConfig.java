@@ -2,9 +2,10 @@ package com.example.demo.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 
-@Configuration
+//@Configuration
 public class BeansConfig {
 
 
@@ -16,6 +17,7 @@ public class BeansConfig {
         return user;
     }
 
+    @Lazy
     @Bean(name = "info", initMethod = "doInit", destroyMethod = "doDestroy")
     public Info createInfo() {
         Info info = new Info();

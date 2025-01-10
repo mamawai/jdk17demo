@@ -27,8 +27,8 @@ public class User implements BeanFactoryAware, BeanNameAware, ApplicationContext
     /**
      * （在bean实例化之后，初始化之前进行的依赖注入）前提是未使用Lazy Loading
      */
+    @Lazy
     @Autowired
-//    @Lazy
     private Info info;
 
     /**
@@ -60,6 +60,9 @@ public class User implements BeanFactoryAware, BeanNameAware, ApplicationContext
         this.age = age;
     }
 
+    public Info getInfo() {
+        return info;
+    }
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
@@ -97,5 +100,4 @@ public class User implements BeanFactoryAware, BeanNameAware, ApplicationContext
     public void doDestroy() {
         log.info("execute User#doDestroy");
     }
-
 }

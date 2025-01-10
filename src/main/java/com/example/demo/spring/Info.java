@@ -36,6 +36,10 @@ public class Info implements BeanFactoryAware, BeanNameAware, ApplicationContext
         this.address = address;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         log.info("execute BeanFactoryAware#setBeanFactory");
