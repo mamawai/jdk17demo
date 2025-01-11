@@ -1,4 +1,4 @@
-package com.example.demo.springAop;
+package com.example.springStudy.springAop;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

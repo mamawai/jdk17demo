@@ -1,4 +1,4 @@
-package com.example.demo.transactional;
+package com.example.springStudy.transactional;
 
 
 import com.baomidou.mybatisplus.annotation.*;

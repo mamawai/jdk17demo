@@ -1,43 +1,67 @@
-package com.example.demo.spring;
+package com.example.springStudy.spring;
 
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Lazy;
 
 @Slf4j
 @ToString
-public class Info implements BeanFactoryAware, BeanNameAware, ApplicationContextAware,
+public class User implements BeanFactoryAware, BeanNameAware, ApplicationContextAware,
         InitializingBean, DisposableBean {
 
-    private String telephone;
+    /**
+     * user's name.
+     */
+    private String name;
 
-    private String address;
+    /**
+     * user's age.
+     */
+    private int age;
 
+    /**
+     * （在bean实例化之后，初始化之前进行的依赖注入）前提是未使用Lazy Loading
+     */
+    @Lazy
+    @Autowired
+    private Info info;
+
+    /**
+     * bean factory.
+     */
     private BeanFactory beanFactory;
 
+    /**
+     * application context.
+     */
     private ApplicationContext applicationContext;
 
+    /**
+     * bean name.
+     */
     private String beanName;
 
-    public Info() {
-        log.info("execute Info#new Info()");
+    public User() {
+        log.info("execute User#new User()");
     }
 
-    public void setTelephone(String telephone) {
-        log.info("execute Info#setTelephone({})", telephone);
-        this.telephone = telephone;
+    public void setName(String name) {
+        log.info("execute User#setName({})", name);
+        this.name = name;
     }
 
-    public void setAddress(String address) {
-        log.info("execute Info#setAddress({})", address);
-        this.address = address;
+    public void setAge(int age) {
+        log.info("execute User#setAge({})", age);
+        this.age = age;
     }
 
-    public String getAddress() {
-        return address;
+    public Info getInfo() {
+        return info;
     }
 
     @Override
@@ -70,11 +94,10 @@ public class Info implements BeanFactoryAware, BeanNameAware, ApplicationContext
 
 
     public void doInit() {
-        log.info("execute Info#doInit");
+        log.info("execute User#doInit");
     }
 
     public void doDestroy() {
-        log.info("execute Info#doDestroy");
+        log.info("execute User#doDestroy");
     }
-
 }

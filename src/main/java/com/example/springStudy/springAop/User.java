@@ -1,4 +1,4 @@
-package com.example.demo.springAop;
+package com.example.springStudy.springAop;
 
 
 public class User {
