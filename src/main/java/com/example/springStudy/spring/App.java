@@ -15,7 +15,7 @@ public class App {
         log.info("Init application context");
         // create and configure beans
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
-                "com.example.demo.spring");
+                "com.example.springStudy.spring");
 
         // retrieve configured instance
         User user = (User) context.getBean("user");
