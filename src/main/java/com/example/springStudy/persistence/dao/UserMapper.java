@@ -1,9 +1,9 @@
-package com.example.springStudy.transactional;
+package com.example.springStudy.persistence.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.springStudy.transactional.User;
 import org.apache.ibatis.annotations.Mapper;
 
-@Mapper
 public interface UserMapper extends BaseMapper<User> {
 
 }

@@ -1,5 +1,10 @@
-package com.example.springStudy.transactional;
+package com.example;
 
+import com.example.springStudy.mybatisAop.entity.User;
+import com.example.springStudy.mybatisAop.service.UserServiceMybatisAop;
+import com.example.springStudy.transactional.UserController;
+import com.example.springStudy.transactional.UserService;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -14,6 +19,9 @@ public class AppRunner implements CommandLineRunner {
 
     @Autowired
     private UserController userController;
+
+    @Autowired
+    UserServiceMybatisAop userServiceMybatisAop;
 
     @Override
     public void run(String... args) throws Exception {
@@ -60,17 +68,14 @@ public class AppRunner implements CommandLineRunner {
         *
         * */
 
-        userController.combineMethod();
-//            User user = new User();
-//            user.setName("jack");
-//            user.setAge("18");
-//            userService.insertUser(user);
-//            log.info("insert user res: {}", user);
+        // insert User
+        // userController.combineMethod();
 
-//            User user1 = new User();
-//            user1.setName("marry");
-//            user1.setAge("22");
-//            userService.insertUser(user1);
-//            log.info("insert user1 res: {}", user1);
+
+        // query User
+        User userById = userServiceMybatisAop.getUserById(100L);
+        Long id = userById.getId();
+        System.out.println(id);
+
     }
 }
