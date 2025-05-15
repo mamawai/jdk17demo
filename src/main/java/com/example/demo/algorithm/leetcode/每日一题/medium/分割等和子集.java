@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class 分割等和子集 {
     public static void main(String[] args) {
-        boolean b = new Solution416().canPartition(new int[]{1,2,5});
+        boolean b = new Solution416().canPartition(new int[]{1,5,5,11});
 
         System.out.println(b);
     }
@@ -66,5 +66,18 @@ class Solution416B {
             }
         }
         return dp[n - 1][target];
+    }
+    // 20250407第二次做
+    static class Solution416C {
+        public boolean canPartition(int[] nums) {
+            Arrays.sort(nums);
+            int total = 0;
+            for (int num : nums) {
+                total += num;
+            }
+            if (total % 2 != 0) return false;
+            int target = total / 2;
+            return true;
+        }
     }
 }
