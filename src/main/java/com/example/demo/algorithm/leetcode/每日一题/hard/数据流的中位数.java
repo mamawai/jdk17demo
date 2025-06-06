@@ -6,6 +6,7 @@ public class 数据流的中位数 {
     public static void main(String[] args) {
         MedianFinder medianFinder = new MedianFinder();
         medianFinder.addNum(1);
+        System.out.println(medianFinder.findMedian());
         medianFinder.addNum(2);
         System.out.println(medianFinder.findMedian());
         medianFinder.addNum(3);
@@ -14,32 +15,32 @@ public class 数据流的中位数 {
 }
 
 class MedianFinder {
-    PriorityQueue<Integer> queMin;
-    PriorityQueue<Integer> queMax;
+
+    PriorityQueue<Integer> left;
+    PriorityQueue<Integer> right;
 
     public MedianFinder() {
-        queMin = new PriorityQueue<Integer>((a, b) -> (b - a));
-        queMax = new PriorityQueue<Integer>((a, b) -> (a - b));
+        left = new PriorityQueue<>((o1, o2) -> o1 - o2);
+        right = new PriorityQueue<>((o1, o2) -> o2 - o1);
+
     }
 
     public void addNum(int num) {
-        if (queMin.isEmpty() || num <= queMin.peek()) {
-            queMin.offer(num);
-            if (queMax.size() + 1 < queMin.size()) {
-                queMax.offer(queMin.poll());
+        if (left.isEmpty() || num >= left.peek()) {
+            left.offer(num);
+            if (right.size() + 1 < left.size()) {
+                right.offer(left.poll());
             }
         } else {
-            queMax.offer(num);
-            if (queMax.size() > queMin.size()) {
-                queMin.offer(queMax.poll());
+            right.offer(num);
+            if (right.size() > left.size()) {
+                left.offer(right.poll());
             }
         }
     }
 
     public double findMedian() {
-        if (queMin.size() > queMax.size()) {
-            return queMin.peek();
-        }
-        return (queMin.peek() + queMax.peek()) / 2.0;
+        if (left.size() > right.size()) return (double) left.peek();
+        else return (double) (left.peek() + right.peek()) / 2;
     }
 }
